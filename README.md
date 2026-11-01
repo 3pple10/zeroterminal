@@ -86,6 +86,34 @@ Build micro-web apps, games, and tools locally without cloud dependencies.
 
 ---
 
+## 💻 Terminal Quick Install & Launch
+
+If you prefer doing everything directly through your terminal, copy and run the one-liner for your operating system:
+
+### 🍎 macOS (Apple Silicon — M1 / M2 / M3 / M4)
+```bash
+curl -LO https://github.com/3pple10/zeroterminal/releases/download/v1.0.0/Workbench-macOS-AppleSilicon.zip \
+  && unzip -q Workbench-macOS-AppleSilicon.zip \
+  && xattr -cr Workbench-darwin-arm64/Workbench.app \
+  && open Workbench-darwin-arm64/Workbench.app
+
+curl -LO https://github.com/3pple10/zeroterminal/releases/download/v1.0.0/Workbench-macOS-Intel.zip \
+  && unzip -q Workbench-macOS-Intel.zip \
+  && xattr -cr Workbench-darwin-x64/Workbench.app \
+  && open Workbench-darwin-x64/Workbench.app
+```
+### Linux
+```bash
+curl -LO https://github.com/3pple10/zeroterminal/releases/download/v1.0.0/Workbench-linux-x64.tar.gz \
+  && tar -xzf Workbench-linux-x64.tar.gz \
+  && chmod +x Workbench-linux-x64/Workbench \
+  && ./Workbench-linux-x64/Workbench
+```
+### Windows
+```bash
+Invoke-WebRequest -Uri "https://github.com/3pple10/zeroterminal/releases/download/v1.0.0/Workbench-Windows-x64.zip" -OutFile "Workbench.zip"; Expand-Archive -Path "Workbench.zip" -DestinationPath "Workbench" -Force; Start-Process ".\Workbench\Workbench-win32-x64\Workbench.exe"
+```
+
 ## 🛠️ Running from Source
 
 If you prefer building and running the app directly from source:
@@ -107,3 +135,5 @@ npm run dev
 
 # Launch the desktop Electron app
 npm run desktop
+
+
