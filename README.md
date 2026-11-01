@@ -1,5 +1,5 @@
 # ⚡ ZeroTerminal
-
+> **Note on App Name:** The desktop application bundle and executable are titled **Workbench** (e.g., `Workbench.app`, `Workbench.exe`) under the ZeroTerminal suite.
 <p align="center">
   <strong>The Zero-Risk Desktop Toolbox for CLI Tools, 4K Media Extraction & Offline Local AI.</strong>
 </p>
