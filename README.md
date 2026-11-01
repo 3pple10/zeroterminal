@@ -58,181 +58,78 @@ curl -LO https://github.com/3pple10/zeroterminal/releases/download/v1.0.0/Workbe
   && unzip -q Workbench-macOS-AppleSilicon.zip \
   && xattr -cr Workbench-darwin-arm64/Workbench.app \
   && open Workbench-darwin-arm64/Workbench.app
+```
 
-
-🍏 macOS (Intel x64)
-
-
+### 🍏 macOS (Intel x64)
+```bash
 curl -LO https://github.com/3pple10/zeroterminal/releases/download/v1.0.0/Workbench-macOS-Intel.zip \
   && unzip -q Workbench-macOS-Intel.zip \
   && xattr -cr Workbench-darwin-x64/Workbench.app \
   && open Workbench-darwin-x64/Workbench.app
+```
 
-
-
-🐧 Linux (x86_64)
-
-
+### 🐧 Linux (x86_64)
+```bash
 curl -LO https://github.com/3pple10/zeroterminal/releases/download/v1.0.0/Workbench-linux-x64.tar.gz \
   && tar -xzf Workbench-linux-x64.tar.gz \
   && chmod +x Workbench-linux-x64/Workbench \
   && ./Workbench-linux-x64/Workbench
+```
 
-
-
-🪟 Windows (Run in PowerShell)
-
-
+### 🪟 Windows (Run in PowerShell)
+```powershell
 Invoke-WebRequest -Uri "https://github.com/3pple10/zeroterminal/releases/download/v1.0.0/Workbench-Windows-x64.zip" -OutFile "Workbench.zip"; Expand-Archive -Path "Workbench.zip" -DestinationPath "Workbench" -Force; Start-Process ".\Workbench\Workbench-win32-x64\Workbench.exe"
+```
 
+---
 
+## ✨ Features
 
-
-
-✨ Features
-
-
-1. 🎬 Fetcher (Media Extractor)
-
-
-
+### 1. 🎬 Fetcher (Media Extractor)
 A high-performance GUI wrapper for media downloads that runs completely on your machine.
+* **Smart URL Cleaner:** Automatically strips tracking tags, referral parameters, and timestamps. Displays clean URL preview and auto-detects platform badges (YouTube, X/Twitter, Instagram, TikTok, Facebook).
+* **Batch Downloader:** Toggle Batch Mode to paste multiple links at once.
+* **Format & Quality Control:** Presets from **Best Available**, **4K**, **1080p**, **720p** down to **Audio Only** (`.mp3`, `.flac`, `.mp4`, `.mkv`, `.webm`).
+* **Browser Session Support:** Pass cookies from your browser (Chrome, Firefox, Brave, Edge, Safari) to download your private or member-only playlists safely.
+* **Live Terminal Output:** Real-time log console, download speed, progress bar, and instant cancel/kill button.
 
+---
 
-
-
-
-Smart URL Cleaner: Automatically strips tracking tags, referral parameters, and timestamps. Displays clean URL preview and auto-detects platform badges (YouTube, X/Twitter, Instagram, TikTok, Facebook).
-
-
-Batch Downloader: Toggle Batch Mode to paste multiple links at once.
-
-
-Format & Quality Control: Presets from Best Available, 4K, 1080p, 720p down to Audio Only (.mp3, .flac, .mp4, .mkv, .webm).
-
-
-Browser Session Support: Pass cookies from your browser (Chrome, Firefox, Brave, Edge, Safari) to download your private or member-only playlists safely.
-
-
-Live Terminal Output: Real-time log console, download speed, progress bar, and instant cancel/kill button.
-
-
-
-
-
-
-2. 🛡️ Safe Shell (Visual Terminal Simulator)
-
-
-
+### 2. 🛡️ Safe Shell (Visual Terminal Simulator)
 Prevent destructive terminal accidents with real-time simulation before commands touch your files.
+* **Safeguard Radar:** Real-time confidence scoring:
+  * 🟢 **100% Clean:** Safe, non-destructive navigation (`ls`, `cd`, `pwd`).
+  * 🟡 **85%–99% Warning:** Syntactically correct but destructive (`rm`, `mv`) — requires a double-confirmation click.
+  * 🟠 **70%–84% Caution:** Uncertain or ambiguous file paths.
+  * 🔴 **Below 70% Locked:** Critical syntax warning or dangerous typo (`rm file .txt`, `rm -rf /`) — execution button automatically locks out.
+* **Live-Impact Blueprint:** Renders an animated SVG schematic of your folder tree character-by-character:
+  * `mkdir Photos` spawns a glowing preview folder.
+  * `mv doc.txt Desktop/` draws a real vector arrow from the file to the target container.
+  * Missing destinations snap the arrow red: *"This path doesn't exist. This will accidentally rename your file instead of moving it."*
+* **Trash Recovery:** Destructive file operations automatically use system Trash for safety.
 
+---
 
-
-
-
-Safeguard Radar: Real-time confidence scoring:
-
-
-
-🟢 100% Clean: Safe, non-destructive navigation (ls, cd, pwd).
-
-
-🟡 85%–99% Warning: Syntactically correct but destructive (rm, mv) — requires a double-confirmation click.
-
-
-🟠 70%–84% Caution: Uncertain or ambiguous file paths.
-
-
-🔴 Below 70% Locked: Critical syntax warning or dangerous typo (rm file .txt, rm -rf /) — execution button automatically locks out.
-
-
-
-
-
-
-Live-Impact Blueprint: Renders an animated SVG schematic of your folder tree character-by-character:
-
-
-
-mkdir Photos spawns a glowing preview folder.
-
-
-mv doc.txt Desktop/ draws a real vector arrow from the file to the target container.
-
-
-Missing destinations snap the arrow red: "This path doesn't exist. This will accidentally rename your file instead of moving it."
-
-
-
-
-
-
-Trash Recovery: Destructive file operations automatically use system Trash for safety.
-
-
-
-
-
-
-3.  Local AI Agent & Offline Studio
-
-
-
+### 3. 🤖 Local AI Agent & Offline Studio
 Build micro-web apps, games, and tools locally without cloud dependencies.
+* **100% Private & Offline:** Zero telemetry or data collection.
+* **Flexible Model Backends:**
+  * **Local Runner:** Seamless connection to **Ollama** (`localhost:11434`) or **LM Studio** (`localhost:1234`).
+  * **On-Device WebGPU:** Run quantized models (like Qwen 2.5 Coder) directly in unified memory.
+* **Autonomous Verification Loop:** Plan → Write → Check cycle with automated syntax error correction and built-in offline SQLite/IndexedDB persistence.
+* **Jcode Engine:** High-speed native code editing harness support on Apple Silicon.
 
+---
 
-
-
-
-100% Private & Offline: Zero telemetry or data collection.
-
-
-Flexible Model Backends:
-
-
-
-Local Runner: Seamless connection to Ollama (localhost:11434) or LM Studio (localhost:1234).
-
-
-On-Device WebGPU: Run quantized models (like Qwen 2.5 Coder) directly in unified memory.
-
-
-
-
-
-
-Autonomous Verification Loop: Plan → Write → Check cycle with automated syntax error correction and built-in offline SQLite/IndexedDB persistence.
-
-
-Jcode Engine: High-speed native code editing harness support on Apple Silicon.
-
-
-
-
-
-
-🛠️ Running from Source
-
-
+## 🛠️ Running from Source
 
 If you prefer building and running the app directly from source on macOS, Windows, or Linux:
 
+### Prerequisites
+* **Node.js** 20+ ([nodejs.org](https://nodejs.org))
+* **npm** (bundled with Node.js), **pnpm**, or **bun**
 
-
-Prerequisites
-
-
-
-
-Node.js 20+ (nodejs.org)
-
-
-npm (bundled with Node.js), pnpm, or bun
-
-
-
-
+```bash
 # 1. Clone the repository
 git clone https://github.com/3pple10/zeroterminal.git
 cd zeroterminal
@@ -245,21 +142,16 @@ npm run dev
 
 # 4. In a second terminal tab, launch the desktop Electron app
 npm run desktop
+```
 
+---
 
+## 📄 License
 
+ZeroTerminal is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.  
+Copyright (c) 2026 **3pple10**.
 
-
-📄 License
-
-
-
-ZeroTerminal is licensed under the MIT License — see the LICENSE file for details.
-
-Copyright (c) 2026 3pple10.
-
-
-
+---
 
 <p align="center">
   If you find ZeroTerminal useful, please give it a ⭐ on <a href="https://github.com/3pple10/zeroterminal">GitHub</a>!
